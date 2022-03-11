@@ -141,28 +141,28 @@ const showPosts = (posts) => {
   });
 };
 
+const initLikeAndReport = (title, id, data) => {
+  let displayData = document.getElementById(id);
+  displayData.innerHTML = "";
+
+  let h1 = document.createElement('h1');
+  h1.innerText = title;
+  displayData.appendChild(h1);
+
+  data.forEach((post) => {
+    const div = createPost(post);
+    displayData.appendChild(div);
+  });
+}
+
 const displayLikedPosts = () => {
   const likedPosts = getLikedPosts();
-  document.getElementById("liked").innerHTML = "";
-  likedPosts.forEach((post) => {
-    const div = createPost(post);
-    document.getElementById("liked").appendChild(div);
-  });
+  initLikeAndReport("Liked posts", "liked", likedPosts);
 };
 
 const displayReportedPosts = () => {
   const reportedPosts = getReportedPosts();
-  let showReported = document.getElementById("reported");
-  showReported.innerHTML = "";
-  const title = "Reported posts";
-  let h1 = document.createElement('h1');
-  h1.innerText = title;
-  showReported.appendChild(h1);
-
-  reportedPosts.forEach((post) => {
-    const div = createPost(post);
-    showReported.appendChild(div);
-  });
+  initLikeAndReport("Reported posts", "reported", reportedPosts);
 };
 
 const loadPosts = async () => {
