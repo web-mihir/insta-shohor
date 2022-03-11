@@ -256,3 +256,19 @@ img {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+
+/* for extra */
+
+.qna {
+  padding: 5% 10%;
+  
+}
+
+.qna h1{
+  text-align: center;
+}
+
+.qna-article {
+  margin: 2rem 0;
+}

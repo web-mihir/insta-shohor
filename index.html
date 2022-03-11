@@ -1,85 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Insta-Sohor</title>
-        <link rel="stylesheet" href="./css/style.css" />
-        <!-- Latest compiled and minified CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-            crossorigin="anonymous"
-        />
 
-        <!-- google Montserrat  font  -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insta-Sohor</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
-                <a class="navbar-brand" href="#">Insta-Sohor</a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- google Montserrat  font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-                <div
-                    class="collapse navbar-collapse justify-content-end"
-                    id="navbarSupportedContent"
-                >
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
-                            <i class="fa-solid fa-house"></i>
-                        </li>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+            <a class="navbar-brand" href="#">Insta-Sohor</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                        <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
-                            <i class="fa-solid fa-heart text-danger"></i>
-                        </li>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
+                        <i class="fa-solid fa-house"></i>
+                    </li>
 
-                        <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
-                            <i class="fa-solid fa-eye-slash"></i>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main class="main container mx-auto p-3">
-            <div id="posts">
+                    <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
+                        <i class="fa-solid fa-heart text-danger"></i>
+                    </li>
+
+                    <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
+                        <i class="fa-solid fa-eye-slash"></i>
+                    </li>
+                </ul>
             </div>
-            <div id="liked">
-                <h1>Liked posts</h1>
-            </div>
+        </nav>
+    </header>
+    <main class="main container mx-auto p-3">
+        <div id="posts">
+        </div>
+        <div id="liked">
+            <h1>Liked posts</h1>
+        </div>
 
-            <div id="reported">
-                <h1>Reported posts</h1>
-            </div>
-        </main>
-        <footer></footer>
+        <div id="reported">
+            <h1>Reported posts</h1>
+        </div>
+    </main>
+    <section>
+        <div class="qna">
+            <h1>QNA</h1>
+            <article class="qna-article">
+                <strong>1. How does javascript works?</strong>
+                <p>
+                    জাভাস্ক্রিপ্ট একটি ক্লায়েন্ট-সাইড স্ক্রিপ্টিং ভাষা। এটি একটি ক্লায়েন্ট-সাইড স্ক্রিপ্টিং
+                    ল্যাঙ্গুয়েজ যা ওয়েব-ব্রাউজারের
+                    ভিতরে ক্লায়েন্ট সাইডে এক্সিকিউশন করে । প্রায় সব ব্রাউজার এ জাভাস্ক্রিপ্ট থাকে এবং আজকাল, বেশিরভাগ
+                    আধুনিক ওয়েব ব্রাউজার গুলো জাভাস্ক্রিপ্ট কে সমর্থন করে এবং তাদের জাভাস্ক্রিপ্ট
+                    ইঞ্জিন রয়েছে। যেমন, গুগল ক্রোম এর নিজস্ব জাভাস্ক্রিপ্ট ইঞ্জিন রয়েছে যার নাম V8 ইঙ্গিন।
+                    এবং এই জাভাস্ক্রিপ্ট এর সমস্ত কার্যকলাপ সেই ব্রাউজার এর ইঞ্জিন এর দ্বারা পরিচালিত হয়।
+                    যেমন প্রথমে এইচটিএমএল ফাইল দ্বারা কোন ওয়েবসাইট ওপেন হয় এই ফাইল কে ব্রাউজার এর ইঞ্জিন রিড করে এবং চেক
+                    করে কোন জাভাস্ক্রিপ্ট
+                    ফাইল পেলে সেটিকে মেশিন কোডে রূপান্তরিত করার জন্যে কম্পাইলারের সাহায্য নেয়। এরপর সেটিকে এক্সিকিউশন
+                    করে ব্রাউজার এ আউটপুট দেখায়।
+                </p>
+            </article>
+            <article class="qna-article">
+                <strong>2. What does javascript event loop do?</strong>
+                <p>
+                    আমরা জানি জাভাস্ক্রিপ্ট একটি সিঙ্গেল থ্রেড প্রোগ্রামিং ভাষা।
+                    এই জাভাস্ক্রিপ্ট এর ইভেন্ট লুপ জাভাস্ক্রিপ্ট এর কল স্টাক আর কল ব্যাক সারির সাথে যোগাযোগ রাখে।
+                    ইভেন্ট লুপ কলস্টাক কে এক্সিকিউশন করে ডাটা প্রিন্ট করতে থাকে।
+                    যখন কোন এসিঙ্ক্রনাস ফাংশন কল করা হয় তখন এই ইভেন্ট লুপ সেই ফাংশন কে কলব্যাক কিউ তে রেখে দেয় এবং কল
+                    স্টাক কে সিরিয়াল ভাবে কল করতে থাকে।
+                    আবার যখন কলব্যাক কিউ এর এসিঙ্ক্রনাস ফাংশন এর টাইম সেট করা থাকে যেমন (সেটটাইমআউট ফাংশন) তখন সেই ফাংশন
+                    এর কল স্টাক অনুযায়ী কল করে।
+                </p>
+            </article>
+        </div>
+    </section>
+    <footer></footer>
 
-        <!-- add javascript  file  -->
-        <script src="./js/app.js"></script>
-    </body>
+    <!-- add javascript  file  -->
+    <script src="./js/app.js"></script>
+</body>
+
 </html>
